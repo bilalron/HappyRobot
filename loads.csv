@@ -1,0 +1,16 @@
+reference_number,origin,destination,equipment_type,rate,commodity
+LOAD001,Los Angeles CA,Dallas TX,Dry Van,2500.00,Electronics
+LOAD002,Chicago IL,Atlanta GA,Flatbed,3200.00,Construction Materials
+LOAD003,Miami FL,New York NY,Reefer,2800.00,Fresh Produce
+LOAD004,Seattle WA,Phoenix AZ,Dry Van,2100.00,Retail Goods
+LOAD005,Houston TX,Denver CO,Flatbed,2700.00,Industrial Equipment
+LOAD006,Boston MA,Charlotte NC,Reefer,2400.00,Frozen Foods
+LOAD007,Portland OR,Salt Lake City UT,Dry Van,1900.00,General Merchandise
+LOAD008,Detroit MI,Nashville TN,Flatbed,2300.00,Steel Products
+LOAD009,San Francisco CA,Las Vegas NV,Dry Van,1800.00,Consumer Goods
+LOAD010,Minneapolis MN,Kansas City MO,Reefer,2600.00,Dairy Products
+LOAD011,New Orleans LA,St. Louis MO,Dry Van,2200.00,Paper Products
+LOAD012,Philadelphia PA,Cleveland OH,Flatbed,1950.00,Machinery
+LOAD013,San Diego CA,Austin TX,Reefer,2750.00,Perishable Foods
+LOAD014,Indianapolis IN,Memphis TN,Dry Van,1850.00,Automotive Parts
+LOAD015,Jacksonville FL,Richmond VA,Flatbed,2450.00,Building Materials
