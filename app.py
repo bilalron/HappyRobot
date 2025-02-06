@@ -14,6 +14,7 @@ load_dotenv()
 
 # Get API key from environment
 FMCSA_API_KEY = os.environ.get('FMCSA_API_KEY')
+print(FMCSA_API_KEY)
 if not FMCSA_API_KEY:
     raise ValueError("FMCSA_API_KEY must be set in environment variables")
 
