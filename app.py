@@ -76,9 +76,23 @@ def validate_mc_number(mc_number: str) -> CarrierResponse:
     try:
         url = f"{FMCSA_BASE_URL}{clean_mc}?webKey={FMCSA_API_KEY}"
         
+        # Add headers to mimic browser request
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/json',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Origin': 'https://mobile.fmcsa.dot.gov',
+            'Referer': 'https://mobile.fmcsa.dot.gov/',
+        }
+        
         try:
-            response = requests.get(url, timeout=10)  # Add timeout
-            print(url, response)
+            response = requests.get(url, headers=headers, timeout=10)
+            print(f"URL: {url}")
+            print(f"Response Status: {response.status_code}")
+            print(f"Response Headers: {response.headers}")
+            if response.status_code != 200:
+                print(f"Response Content: {response.text}")
+                
         except requests.exceptions.Timeout:
             raise HTTPException(
                 status_code=504,
