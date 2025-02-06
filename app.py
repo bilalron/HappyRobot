@@ -13,7 +13,7 @@ import os
 load_dotenv()
 
 # Get API key from environment
-FMCSA_API_KEY = os.getenv('FMCSA_API_KEY')
+FMCSA_API_KEY = os.environ.get('FMCSA_API_KEY')
 if not FMCSA_API_KEY:
     raise ValueError("FMCSA_API_KEY must be set in environment variables")
 
