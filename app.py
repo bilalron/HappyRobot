@@ -14,7 +14,6 @@ load_dotenv()
 
 # Get API key from environment
 FMCSA_API_KEY = os.environ.get('FMCSA_API_KEY')
-print(FMCSA_API_KEY)
 if not FMCSA_API_KEY:
     raise ValueError("FMCSA_API_KEY must be set in environment variables")
 
@@ -79,11 +78,13 @@ def validate_mc_number(mc_number: str) -> CarrierResponse:
         
         try:
             response = requests.get(url, timeout=10)  # Add timeout
+            print(url, response)
         except requests.exceptions.Timeout:
             raise HTTPException(
                 status_code=504,
                 detail="FMCSA API request timed out"
             )
+        
         except requests.exceptions.RequestException as e:
             raise HTTPException(
                 status_code=502,
